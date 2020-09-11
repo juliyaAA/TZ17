@@ -1,9 +1,8 @@
 // Задача 1. Создайте функцию, которая возвращает ваше имя. Имя вводится с input
-// let button = document.getElementById('button');
 
 let pow = document.getElementById('userName');
 function buttonСlick() {
-    document.getElementById('str').innerHTML="Ваше имя: " + pow.value;
+    document.getElementById('str').innerHTML = "Ваше имя: " + pow.value;
 }
 buttonСlick();
 
@@ -11,17 +10,17 @@ buttonСlick();
 // 1й способ 
 
 function getComparison(a, b) {
-    if ((a > b) || (a == b)) {
-        return a;
-    }
+    return a >= b  ?  a  :  b;
+    
 }
 getComparison(9, 7);
 
+
 // 2й способ
-function getEvent (c, d) {
-    return Math.max(c , d);
+function getEvent(c, d) {
+    return Math.max(c, d);
 }
-getEvent (10, 7); 
+getEvent(10, 7);
 
 /* Задача 4. Создайте функцию, которая возвращает случайное число в указанном
 диапазоне. Диапазон указывает пользователь с помощью двух переменных, которые
@@ -30,6 +29,6 @@ getEvent (10, 7);
 function getRandom(min, max) {
     let min1 = Math.ceil(min);
     let max2 = Math.floor(max);
-    return Math.floor(Math.random() * (max2 - min1 + 1)) + min1; 
+    return Math.floor(Math.random() * (max2 - min1 + 1)) + min1;
 }
-getRandom (1, 20);
+getRandom(1, 20);
