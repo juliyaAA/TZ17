@@ -1,10 +1,14 @@
 // Задача 1. Создайте функцию, которая возвращает ваше имя. Имя вводится с input
 
-let pow = document.getElementById('userName');
-function buttonСlick() {
-    document.getElementById('str').innerHTML = "Ваше имя: " + pow.value;
+function getName() {
+    return document.getElementById('userName').value;
 }
-buttonСlick();
+const form = document.getElementById('form');
+function getOutput(event) {
+    event.preventDefault();
+    document.getElementById('str').innerHTML = "Ваше имя: " +  getName();
+}
+form.addEventListener('submit', getOutput);
 
 // Задача 2 и 3. Создайте функцию, которая принимает 2 числа и возвращает большее число из двух, либо любое из них если они равны.
 // 1й способ 
@@ -17,10 +21,10 @@ getComparison(9, 7);
 
 
 // 2й способ
-function getEvent(c, d) {
+function getNumber(c, d) {
     return Math.max(c, d);
 }
-getEvent(10, 7);
+getNumber(10, 7);
 
 /* Задача 4. Создайте функцию, которая возвращает случайное число в указанном
 диапазоне. Диапазон указывает пользователь с помощью двух переменных, которые
